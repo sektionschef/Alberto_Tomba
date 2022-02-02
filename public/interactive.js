@@ -32,3 +32,56 @@ function resize_canvas() {
 
   resizeCanvas(CANVAS_WIDTH * SCALING_FACTOR, CANVAS_HEIGHT * SCALING_FACTOR);
 }
+
+
+function explode() {
+  var bodies = Composite.allBodies(engine.world);
+
+  for (var i = 0; i < bodies.length; i++) {
+    var body = bodies[i];
+
+    if (!body.isStatic) {
+      var forceMagnitude = 0.05 * body.mass;
+
+      Body.applyForce(body, body.position, {
+        // x: (forceMagnitude + Common.random() * forceMagnitude) * Common.choose([1, -1]),
+        // y: -forceMagnitude + Common.random() * -forceMagnitude
+        x: forceMagnitude,
+        y: - forceMagnitude
+      });
+    }
+  }
+}
+
+
+function freezeLifestyle() {
+
+  if (Math.abs(engine.timing.timeScale - timeScaleTarget) > 0.00001) {
+    engine.timing.timeScale += (timeScaleTarget - engine.timing.timeScale) * 0.05;
+  }
+
+  // counter += 1;
+
+  // every 1.5 sec
+  // if (frameCount % 60 * 3 == 0) {
+
+  // flip the timescale
+  // if (timeScaleTarget < 1) {
+  //   timeScaleTarget = 1;
+  // } else {
+  //   timeScaleTarget = 0.05;
+  // }
+
+  // reset counter
+  // counter = 0;
+  // }
+}
+
+
+// REMOVE
+function keyPressed() {
+  if (keyCode === LEFT_ARROW) {
+    console.log("miau");
+    explode()
+  }
+}

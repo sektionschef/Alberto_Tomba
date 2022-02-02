@@ -2,6 +2,7 @@
 
 * hearbeat - a bissl zucke und dann regelmäßig eine explosion
 * strokes mit random angle - drei von ihnen.
+* epicentrum - entfernung von einem punkt schwächt die force
 
 https://github.com/liabru/matter-js/blob/master/examples/timescale.js 
 

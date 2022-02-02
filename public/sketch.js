@@ -14,6 +14,11 @@ let fps = 0;
 let default_debugging_text_size = 15;
 let debugging_physical_body_count = 0;
 
+// REWORK
+let timeScaleTarget = 1;
+// let timeScaleTarget = 0.05;
+let counter = 0;;
+
 
 // matter.js stuff
 var Engine = Matter.Engine;
@@ -112,6 +117,14 @@ function setup() {
   areas = new Areas(areas_data.data);
 
   resize_canvas();
+
+  // CONTAINER
+  // Composite.add(world, [
+  //   Bodies.rectangle(400, 0, 800, 50, { isStatic: true }),
+  //   Bodies.rectangle(400, 600, 800, 50, { isStatic: true }),
+  //   Bodies.rectangle(800, 300, 50, 600, { isStatic: true }),
+  //   Bodies.rectangle(0, 300, 50, 600, { isStatic: true })
+  // ]);
 }
 
 function draw() {
@@ -142,6 +155,25 @@ function draw() {
 
   // show_framerate();
   // show_number_physical_bodies();
+
+
+  // if (frameCount % 3 == 0) {
+  //   logging.debug("timeScale: " + engine.timing.timeScale);
+  // }
+
+  if (frameCount % 240 == 0) {
+    console.log("Trigger freezeLifestyle");
+    // explode();
+    if (timeScaleTarget == 1) {
+      timeScaleTarget = 0;
+    } else {
+      if (frameCount % 480 == 0) {
+        timeScaleTarget = 1;
+      }
+    }
+  }
+
+  freezeLifestyle();
 }
 
 
