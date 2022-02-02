@@ -1,0 +1,112 @@
+{
+    "data": [
+        {
+            "label": "1",
+            "shape": "circle",
+            "x": 86,
+            "y": 51,
+            "w": 38,
+            "h": 37,
+            "offsetPhysical": {
+                "x": -19,
+                "y": -19
+            }
+        },
+        {
+            "label": "2",
+            "shape": "circle",
+            "x": 211,
+            "y": 49,
+            "w": 42,
+            "h": 44,
+            "offsetPhysical": {
+                "x": -21,
+                "y": -22
+            }
+        },
+        {
+            "label": "3",
+            "shape": "circle",
+            "x": 316,
+            "y": 45,
+            "w": 43,
+            "h": 47,
+            "offsetPhysical": {
+                "x": -22,
+                "y": -23
+            }
+        },
+        {
+            "label": "4",
+            "shape": "circle",
+            "x": 428,
+            "y": 45,
+            "w": 46,
+            "h": 50,
+            "offsetPhysical": {
+                "x": -23,
+                "y": -25
+            }
+        },
+        {
+            "label": "5",
+            "shape": "circle",
+            "x": 538,
+            "y": 51,
+            "w": 40,
+            "h": 38,
+            "offsetPhysical": {
+                "x": -20,
+                "y": -19
+            }
+        },
+        {
+            "label": "6",
+            "shape": "circle",
+            "x": 616,
+            "y": 52,
+            "w": 37,
+            "h": 36,
+            "offsetPhysical": {
+                "x": -18,
+                "y": -18
+            }
+        },
+        {
+            "label": "7",
+            "shape": "circle",
+            "x": 701,
+            "y": 56,
+            "w": 32,
+            "h": 29,
+            "offsetPhysical": {
+                "x": -16,
+                "y": -15
+            }
+        },
+        {
+            "label": "8",
+            "shape": "circle",
+            "x": 771,
+            "y": 55,
+            "w": 40,
+            "h": 35,
+            "offsetPhysical": {
+                "x": -20,
+                "y": -17
+            }
+        },
+        {
+            "label": "9",
+            "shape": "circle",
+            "x": 844,
+            "y": 53,
+            "w": 35,
+            "h": 34,
+            "offsetPhysical": {
+                "x": -17,
+                "y": -17
+            }
+        }
+    ]
+}
