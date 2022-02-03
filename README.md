@@ -3,6 +3,7 @@
 * hearbeat - a bissl zucke und dann regelmäßig eine explosion
 * strokes mit random angle - drei von ihnen.
 * epicentrum - entfernung von einem punkt schwächt die force
+* wiederum drei ebenen: canvas - umdrehen + hintergrund dnyamisch vlt. impediments + bälle + drüber vlt.
 
 https://github.com/liabru/matter-js/blob/master/examples/timescale.js 
 

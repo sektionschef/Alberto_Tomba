@@ -101,8 +101,11 @@ function setup() {
 
   background_image = getRandomFromList([background_01, background_02, background_03, background_04]);
 
-  impediment_strokes = new Strokes(stroke_data.data)
-  impediment_strokes.create_all();
+  // impediment_strokes = new Strokes(stroke_data.data)
+  // impediment_strokes.create_all();
+
+  impediment_walls = new Walls()
+  impediment_walls.create_all();
 
   bubbles_physical = new Bubbles(bubble_data.data);
 
@@ -120,16 +123,18 @@ function setup() {
 
   // CONTAINER
   // Composite.add(world, [
-  //   Bodies.rectangle(400, 0, 800, 50, { isStatic: true }),
-  //   Bodies.rectangle(400, 600, 800, 50, { isStatic: true }),
-  //   Bodies.rectangle(800, 300, 50, 600, { isStatic: true }),
-  //   Bodies.rectangle(0, 300, 50, 600, { isStatic: true })
+  //   // Bodies.rectangle(0, height, width, 50, { isStatic: true }),
+  //   // Bodies.rectangle(400, 600, 800, 50, { isStatic: true }),
+  //   // Bodies.rectangle(800, 300, 50, 600, { isStatic: true }),
+  //   // Bodies.rectangle(0, 300, 50, 600, { isStatic: true })
   // ]);
 }
 
 function draw() {
 
+
   translate(-width / 2, -height / 2, 0);
+  background(255);
 
   push();
   image(background_image, 0, 0, background_image.width * SCALING_FACTOR, background_image.height * SCALING_FACTOR)
@@ -143,7 +148,8 @@ function draw() {
   areas.show();
 
   bubbles_physical.show();
-  impediment_strokes.show();
+  // impediment_strokes.show();
+  impediment_walls.show();
 
   bubbles_physical.kill_not_needed(300);
 
@@ -162,12 +168,13 @@ function draw() {
   // }
 
   if (frameCount % 240 == 0) {
-    console.log("Trigger freezeLifestyle");
+    console.log("Trigger freeze.");
     // explode();
     if (timeScaleTarget == 1) {
       timeScaleTarget = 0;
     } else {
       if (frameCount % 480 == 0) {
+        console.log("Release freeze.");
         timeScaleTarget = 1;
       }
     }
