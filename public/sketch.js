@@ -91,8 +91,9 @@ function setup() {
   engine = Engine.create();
   world = engine.world;
 
-  // const VERTICAL_GRAVITY = -0.25;
-  const VERTICAL_GRAVITY = getRandomFromInterval(0.05, 0.5);
+  const VERTICAL_GRAVITY = 1;
+  // const VERTICAL_GRAVITY = getRandomFromInterval(0.05, 0.5);
+
 
   chosen_palette = getRandomFromList(palettes.palettes);
   PALETTE = chosen_palette.values;
@@ -168,14 +169,17 @@ function draw() {
   // }
 
   if (frameCount % 240 == 0) {
-    console.log("Trigger freeze.");
-    // explode();
-    if (timeScaleTarget == 1) {
-      timeScaleTarget = 0;
-    } else {
-      if (frameCount % 480 == 0) {
-        console.log("Release freeze.");
-        timeScaleTarget = 1;
+    console.log("Booom!");
+    explode();
+    if (frameCount % 60 == 0) {
+      console.log("Trigger freeze.");
+      if (timeScaleTarget == 1) {
+        timeScaleTarget = 0;
+      } else {
+        if (frameCount % 480 == 0) {
+          console.log("Release freeze.");
+          timeScaleTarget = 1;
+        }
       }
     }
   }

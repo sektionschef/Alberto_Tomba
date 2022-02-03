@@ -45,13 +45,14 @@ function explode() {
     var body = bodies[i];
 
     if (!body.isStatic) {
-      var forceMagnitude = 0.05 * body.mass;
+      // var forceMagnitude = 0.05 * body.mass;
+      var forceMagnitude = 0.1 * body.mass;
 
       Body.applyForce(body, body.position, {
         // x: (forceMagnitude + Common.random() * forceMagnitude) * Common.choose([1, -1]),
         // y: -forceMagnitude + Common.random() * -forceMagnitude
-        x: forceMagnitude,
-        y: - forceMagnitude
+        x: forceMagnitude * getRandomFromInterval(-1, 1),
+        y: forceMagnitude * getRandomFromInterval(-1, 1)
       });
     }
   }
@@ -60,25 +61,11 @@ function explode() {
 
 function freezeLifestyle() {
 
+  // if gap between value and target is bigger than
   if (Math.abs(engine.timing.timeScale - timeScaleTarget) > 0.00001) {
     engine.timing.timeScale += (timeScaleTarget - engine.timing.timeScale) * 0.05;
   }
 
-  // counter += 1;
-
-  // every 1.5 sec
-  // if (frameCount % 60 * 3 == 0) {
-
-  // flip the timescale
-  // if (timeScaleTarget < 1) {
-  //   timeScaleTarget = 1;
-  // } else {
-  //   timeScaleTarget = 0.05;
-  // }
-
-  // reset counter
-  // counter = 0;
-  // }
 }
 
 
