@@ -60,10 +60,9 @@ const origins_data = [
 function preload() {
   fontRegular = loadFont('SourceSansPro-Regular.otf');
 
-  background_01 = loadImage('background_01.png');
-  background_02 = loadImage('background_02.png');
-  background_03 = loadImage('background_03.png');
-  background_04 = loadImage('background_04.png');
+  background_a = loadImage('background_a.png');
+  background_b = loadImage('background_b.png');
+  background_c = loadImage('background_c.png');
   canvas_image = loadImage('canvas_02.png');
 
   strokes_full = loadImage('strokes_full.png');
@@ -71,7 +70,7 @@ function preload() {
 
   stroke_data = loadJSON("stroke_data.json");
   bubble_data = loadJSON("bubble_data.json");
-  areas_data = loadJSON("areas_data.json", loadAreas);
+  // areas_data = loadJSON("areas_data.json", loadAreas);
   palettes = loadJSON("palettes.json");
 
 
@@ -98,8 +97,6 @@ function setup() {
   PALETTE_NAME = chosen_palette.name;
   console.log(PALETTE_NAME);
 
-  background_image = getRandomFromList([background_01, background_02, background_03, background_04]);
-
   // impediment_strokes = new Strokes(stroke_data.data)
   // impediment_strokes.create_all();
 
@@ -116,7 +113,7 @@ function setup() {
 
   background(120);
 
-  areas = new Areas(areas_data.data);
+  // areas = new Areas(areas_data.data);
 
   resize_canvas();
 }
@@ -128,7 +125,9 @@ function draw() {
   background(255);
 
   push();
-  image(background_image, 0, 0, background_image.width * SCALING_FACTOR, background_image.height * SCALING_FACTOR)
+  image(background_a, 0, 0, background_a.width * SCALING_FACTOR, background_a.height * SCALING_FACTOR)
+  image(background_b, 0, 0, background_b.width * SCALING_FACTOR, background_b.height * SCALING_FACTOR)
+  image(background_c, 0, 0, background_c.width * SCALING_FACTOR, background_c.height * SCALING_FACTOR)
   pop();
 
   origins.drop_all();
@@ -136,7 +135,7 @@ function draw() {
   if (logging.getLevel() <= 1) {
     origins.debugging_show_origins();
   }
-  areas.show();
+  // areas.show();
 
   bubbles_physical.show();
   // impediment_strokes.show();
@@ -146,9 +145,9 @@ function draw() {
 
   Engine.update(engine);
 
-  push();
-  image(canvas_image, 0, 0, background_image.width * SCALING_FACTOR, background_image.height * SCALING_FACTOR)
-  pop();
+  // push();
+  // image(canvas_image, 0, 0, background_image.width * SCALING_FACTOR, background_image.height * SCALING_FACTOR)
+  // pop();
 
   // show_framerate();
   // show_number_physical_bodies();

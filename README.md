@@ -4,6 +4,7 @@
 * strokes mit random angle - drei von ihnen.
 * epicentrum - entfernung von einem punkt schwächt die force
 * wiederum drei ebenen: canvas - umdrehen + hintergrund dnyamisch vlt. impediments + bälle + drüber vlt.
+* change gravity - `engine.world.gravity.y` & `engine.world.gravity.x`
 
 * Epizentrum position
 * Staerke Epizentrum
