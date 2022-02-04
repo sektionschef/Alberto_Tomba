@@ -16,8 +16,6 @@ let debugging_physical_body_count = 0;
 
 // REWORK
 let timeScaleTarget = 1;
-// let timeScaleTarget = 0.05;
-let counter = 0;;
 
 
 // matter.js stuff
@@ -52,10 +50,10 @@ let area04;
 let area05;
 
 const origins_data = [
-  { label: "1", x: getRandomFromInterval(0, CANVAS_WIDTH), y: -60, },
-  { label: "2", x: getRandomFromInterval(0, CANVAS_WIDTH), y: -60, },
-  { label: "3", x: getRandomFromInterval(0, CANVAS_WIDTH), y: -60, },
-  { label: "4", x: getRandomFromInterval(0, CANVAS_WIDTH), y: -60, },
+  { label: "1", x: getRandomFromInterval(0, CANVAS_WIDTH), y: 60, },
+  { label: "2", x: getRandomFromInterval(0, CANVAS_WIDTH), y: 60, },
+  { label: "3", x: getRandomFromInterval(0, CANVAS_WIDTH), y: 60, },
+  { label: "4", x: getRandomFromInterval(0, CANVAS_WIDTH), y: 60, },
 ]
 
 
@@ -121,14 +119,6 @@ function setup() {
   areas = new Areas(areas_data.data);
 
   resize_canvas();
-
-  // CONTAINER
-  // Composite.add(world, [
-  //   // Bodies.rectangle(0, height, width, 50, { isStatic: true }),
-  //   // Bodies.rectangle(400, 600, 800, 50, { isStatic: true }),
-  //   // Bodies.rectangle(800, 300, 50, 600, { isStatic: true }),
-  //   // Bodies.rectangle(0, 300, 50, 600, { isStatic: true })
-  // ]);
 }
 
 function draw() {

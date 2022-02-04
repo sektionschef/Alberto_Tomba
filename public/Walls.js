@@ -17,7 +17,7 @@ class Walls extends Particles {
             {
                 // top
                 x: 0,
-                y: 2200,
+                y: - thickness,
                 w: width,
                 h: thickness
             },

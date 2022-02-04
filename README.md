@@ -5,6 +5,9 @@
 * epicentrum - entfernung von einem punkt schwächt die force
 * wiederum drei ebenen: canvas - umdrehen + hintergrund dnyamisch vlt. impediments + bälle + drüber vlt.
 
+* Epizentrum position
+* Staerke Epizentrum
+
 https://github.com/liabru/matter-js/blob/master/examples/timescale.js 
 
 # Environment
