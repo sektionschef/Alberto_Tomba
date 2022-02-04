@@ -20,7 +20,7 @@ function resize_canvas() {
   // Override for full scale
   // SCALING_FACTOR = 1;
 
-  bubbles_physical.kill_all();
+  particles_physical.kill_all();
 
   // reboot - since scaling in physical world is only possible relative to the preceding body.
   // impediment_strokes.kill_all();

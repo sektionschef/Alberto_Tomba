@@ -44,8 +44,6 @@ let PALETTE;
 let background_image;
 let background_color;
 
-let bubble;
-
 let area04;
 let area05;
 
@@ -66,10 +64,10 @@ function preload() {
   canvas_image = loadImage('canvas_02.png');
 
   strokes_full = loadImage('strokes_full.png');
-  bubbles_full = loadImage('bubble_full.png');
+  particles_image = loadImage('particles.png');
 
   stroke_data = loadJSON("stroke_data.json");
-  bubble_data = loadJSON("bubble_data.json");
+  particles_data = loadJSON("particles_data.json");
   // areas_data = loadJSON("areas_data.json", loadAreas);
   palettes = loadJSON("palettes.json");
 
@@ -103,7 +101,7 @@ function setup() {
   impediment_walls = new Walls()
   impediment_walls.create_all();
 
-  bubbles_physical = new Bubbles(bubble_data.data);
+  particles_physical = new Bubbles(particles_data.data);
 
   origins = new Origins(origins_data);
   origins.create_all();
@@ -137,11 +135,11 @@ function draw() {
   }
   // areas.show();
 
-  bubbles_physical.show();
+  particles_physical.show();
   // impediment_strokes.show();
   impediment_walls.show();
 
-  bubbles_physical.kill_not_needed(300);
+  particles_physical.kill_not_needed(300);
 
   Engine.update(engine);
 

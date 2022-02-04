@@ -1,0 +1,40 @@
+{
+    "data": [
+        {
+            "label": "1",
+            "shape": "circle",
+            "x": 158,
+            "y": 107,
+            "w": 34,
+            "h": 34,
+            "offsetPhysical": {
+                "x": -17,
+                "y": -17
+            }
+        },
+        {
+            "label": "2",
+            "shape": "circle",
+            "x": 237,
+            "y": 109,
+            "w": 35,
+            "h": 31,
+            "offsetPhysical": {
+                "x": -17,
+                "y": -15
+            }
+        },
+        {
+            "label": "3",
+            "shape": "circle",
+            "x": 316,
+            "y": 45,
+            "w": 43,
+            "h": 47,
+            "offsetPhysical": {
+                "x": -22,
+                "y": -23
+            }
+        }
+    ]
+}
