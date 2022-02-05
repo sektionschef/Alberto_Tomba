@@ -7,6 +7,8 @@ const SWITCH_LOGGING_LEVEL = "info";
 const CANVAS_WIDTH = 1080;
 const CANVAS_HEIGHT = 1080;
 
+const NUMBER_PARTICLES = 100;
+
 let custom_font;
 let custom_font_bold;
 
@@ -123,7 +125,10 @@ function draw() {
   image(background_c, 0, 0, background_c.width * SCALING_FACTOR, background_c.height * SCALING_FACTOR)
   pop();
 
-  origins.drop_all();
+  // LIMIT
+  if (particles_physical.bodies.length < NUMBER_PARTICLES) {
+    origins.drop_all();
+  }
 
   if (logging.getLevel() <= 1) {
     origins.debugging_show_origins();
@@ -134,15 +139,15 @@ function draw() {
   // impediment_strokes.show();
   impediment_walls.show();
 
-  particles_physical.kill_not_needed(100);
+  particles_physical.kill_not_needed(NUMBER_PARTICLES);
 
   // areas_top.show();
 
   Engine.update(engine);
 
-  // push();
-  // image(canvas_image, 0, 0, background_image.width * SCALING_FACTOR, background_image.height * SCALING_FACTOR)
-  // pop();
+  push();
+  image(canvas_image, 0, 0, canvas_image.width * SCALING_FACTOR, canvas_image.height * SCALING_FACTOR)
+  pop();
 
   // show_framerate();
   // show_number_physical_bodies();

@@ -1,7 +1,5 @@
 class Origin {
     constructor(position_x, position_y, label) {
-        // this.position_x = Math.abs(position_x);
-        // this.position_y = Math.abs(position_y);
         this.position_x = position_x;
         this.position_y = position_y;
         this.label = label;
@@ -60,7 +58,7 @@ class Origins {
 
     drop_all() {
         for (let origin of this.bodies) {
-            let frequency = Math.floor(fxrand() * 100);
+            let frequency = Math.floor(fxrand() * 10);
             origin.drop(frequency);
         }
     }

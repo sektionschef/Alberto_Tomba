@@ -1,7 +1,11 @@
 # Tasks
 * add 100 particles and then its done
+* change gravity - `engine.world.gravity.y` & `engine.world.gravity.x`
+* check resize
 * combine the pixels instead of redrawing
 * haben particles bei origin einen random angle?
+* background einfacher
+
 
 ## ebenen
 * drauf - impasto details und die rakes, 
@@ -11,7 +15,6 @@
 * background: the canvas, sth dirty 
 
 * hearbeat - a bissl zucke und dann regelmäßig eine explosion
-* change gravity - `engine.world.gravity.y` & `engine.world.gravity.x`
 * epicentrum - entfernung von einem punkt schwächt die force
 * Epizentrum position
 * Staerke Epizentrum
