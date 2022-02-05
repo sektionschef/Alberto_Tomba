@@ -46,7 +46,7 @@ function explode() {
 
     if (!body.isStatic) {
       // var forceMagnitude = 0.05 * body.mass;
-      var forceMagnitude = 0.1 * body.mass;
+      var forceMagnitude = 1 * body.mass;
 
       Body.applyForce(body, body.position, {
         // x: (forceMagnitude + Common.random() * forceMagnitude) * Common.choose([1, -1]),
@@ -68,11 +68,9 @@ function freezeLifestyle() {
 
 }
 
+function changeGravity() {
+  engine.world.gravity.x = sin(radians(gravity_thing))
+  engine.world.gravity.y = cos(radians(gravity_thing))
 
-// REMOVE
-function keyPressed() {
-  if (keyCode === LEFT_ARROW) {
-    console.log("miau");
-    explode()
-  }
+  gravity_thing += 0.1;
 }

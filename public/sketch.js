@@ -9,6 +9,8 @@ const CANVAS_HEIGHT = 1080;
 
 const NUMBER_PARTICLES = 100;
 
+let gravity_thing = 0;
+
 let custom_font;
 let custom_font_bold;
 
@@ -171,9 +173,9 @@ function draw() {
         }
       }
     }
+  } else {
+    changeGravity();
   }
 
   freezeLifestyle();
 }
-
-

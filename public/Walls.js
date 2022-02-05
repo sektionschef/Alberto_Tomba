@@ -2,7 +2,7 @@
 class Walls extends Particles {
     constructor() {
 
-        let thickness = 50;
+        let thickness = 500;
 
         const options = {
             isStatic: true,

@@ -1,11 +1,18 @@
 # Tasks
-* add 100 particles and then its done
 * change gravity - `engine.world.gravity.y` & `engine.world.gravity.x`
 * check resize
 * combine the pixels instead of redrawing
 * haben particles bei origin einen random angle?
 * background einfacher
 
+# sinus
+* https://p5js.org/examples/math-sine-cosine.html
+* https://p5js.org/examples/math-sine.html 
+* https://gorillasun.de/blog/Continuous-oscillating-motion-in-P5JS-with-Sine-functions 
+
+# parameter
+* gravity speed change
+* power des epizentrums
 
 ## ebenen
 * drauf - impasto details und die rakes, 
