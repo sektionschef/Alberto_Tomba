@@ -44,10 +44,6 @@ let PALETTE;
 let background_image;
 let background_color;
 
-let area04;
-let area05;
-let area06;
-
 const origins_data = [
   { label: "1", x: getRandomFromInterval(0, CANVAS_WIDTH), y: 60, },
   { label: "2", x: getRandomFromInterval(0, CANVAS_WIDTH), y: 60, },
@@ -70,12 +66,8 @@ function preload() {
   stroke_data = loadJSON("stroke_data.json");
   particles_data = loadJSON("particles_data.json");
   areas_data = loadJSON("areas_data.json", loadAreas);
+  // areas_top_data = loadJSON("areas_top_data.json", loadAreasTop);
   palettes = loadJSON("palettes.json");
-
-
-  // area_04 = loadImage('area_04.png');
-  // area_05 = loadImage('area_05.png');
-  area_06 = loadImage('area_06.png');
 }
 
 function setup() {
@@ -114,6 +106,7 @@ function setup() {
   background(120);
 
   areas = new Areas(areas_data.data);
+  // areas_top = new Areas(areas_top_data.data);
 
   resize_canvas();
 }
@@ -130,12 +123,6 @@ function draw() {
   image(background_c, 0, 0, background_c.width * SCALING_FACTOR, background_c.height * SCALING_FACTOR)
   pop();
 
-  // test
-  // push();
-  // tint(30, 120, 200);
-  // image(area_06, 0, 0, area_06.width * SCALING_FACTOR, area_06.height * SCALING_FACTOR)
-  // pop();
-
   origins.drop_all();
 
   if (logging.getLevel() <= 1) {
@@ -147,7 +134,9 @@ function draw() {
   // impediment_strokes.show();
   impediment_walls.show();
 
-  particles_physical.kill_not_needed(300);
+  particles_physical.kill_not_needed(100);
+
+  // areas_top.show();
 
   Engine.update(engine);
 

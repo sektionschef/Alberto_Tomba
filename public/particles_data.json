@@ -2,99 +2,131 @@
     "data": [
         {
             "label": "1",
-            "shape": "circle",
-            "x": 20,
-            "y": 15,
-            "w": 75,
-            "h": 81,
-            "offsetPhysical": {
-                "x": -37,
-                "y": -40
-            }
+            "shape": "rect",
+            "x": 112,
+            "y": 55,
+            "w": 38,
+            "h": 60
         },
         {
             "label": "2",
-            "shape": "circle",
-            "x": 114,
-            "y": 27,
-            "w": 71,
-            "h": 56,
-            "offsetPhysical": {
-                "x": -35,
-                "y": -28
-            }
+            "shape": "rect",
+            "x": 196,
+            "y": 69,
+            "w": 35,
+            "h": 42
         },
         {
             "label": "3",
-            "shape": "circle",
-            "x": 198,
-            "y": 19,
-            "w": 76,
-            "h": 99,
-            "offsetPhysical": {
-                "x": -39,
-                "y": -50
-            }
+            "shape": "rect",
+            "x": 265,
+            "y": 73,
+            "w": 38,
+            "h": 39
         },
         {
             "label": "4",
-            "shape": "circle",
-            "x": 289,
-            "y": 22,
-            "w": 73,
-            "h": 75,
-            "offsetPhysical": {
-                "x": -36,
-                "y": -37
-            }
+            "shape": "rect",
+            "x": 323,
+            "y": 74,
+            "w": 42,
+            "h": 44
         },
         {
             "label": "5",
-            "shape": "circle",
-            "x": 369,
-            "y": 21,
-            "w": 74,
-            "h": 62,
-            "offsetPhysical": {
-                "x": -36,
-                "y": -37
-            }
+            "shape": "rect",
+            "x": 388,
+            "y": 71,
+            "w": 42,
+            "h": 45
         },
         {
             "label": "6",
-            "shape": "circle",
-            "x": 465,
-            "y": 22,
-            "w": 74,
-            "h": 87,
-            "offsetPhysical": {
-                "x": -37,
-                "y": -43
-            }
+            "shape": "rect",
+            "x": 453,
+            "y": 70,
+            "w": 45,
+            "h": 46
         },
         {
-            "label": "first row last one",
-            "shape": "circle",
-            "x": 941,
-            "y": 26,
-            "w": 75,
-            "h": 107,
-            "offsetPhysical": {
-                "x": -37,
-                "y": -53
-            }
+            "label": "7",
+            "shape": "rect",
+            "x": 52,
+            "y": 76,
+            "w": 36,
+            "h": 40
         },
         {
-            "label": "last row last one",
-            "shape": "circle",
-            "x": 1014,
-            "y": 279,
-            "w": 53,
-            "h": 66,
-            "offsetPhysical": {
-                "x": -26,
-                "y": -33
-            }
+            "label": "8",
+            "shape": "rect",
+            "x": 518,
+            "y": 78,
+            "w": 44,
+            "h": 38
+        },
+        {
+            "label": "9",
+            "shape": "rect",
+            "x": 578,
+            "y": 83,
+            "w": 44,
+            "h": 41
+        },
+        {
+            "label": "10",
+            "shape": "rect",
+            "x": 637,
+            "y": 67,
+            "w": 46,
+            "h": 49
+        },
+        {
+            "label": "11",
+            "shape": "rect",
+            "x": 700,
+            "y": 64,
+            "w": 42,
+            "h": 57
+        },
+        {
+            "label": "12",
+            "shape": "rect",
+            "x": 762,
+            "y": 83,
+            "w": 38,
+            "h": 32
+        },
+        {
+            "label": "13",
+            "shape": "rect",
+            "x": 812,
+            "y": 88,
+            "w": 37,
+            "h": 30
+        },
+        {
+            "label": "14",
+            "shape": "rect",
+            "x": 870,
+            "y": 86,
+            "w": 38,
+            "h": 35
+        },
+        {
+            "label": "15",
+            "shape": "rect",
+            "x": 918,
+            "y": 77,
+            "w": 44,
+            "h": 38
+        },
+        {
+            "label": "16",
+            "shape": "rect",
+            "x": 971,
+            "y": 74,
+            "w": 47,
+            "h": 46
         }
     ]
 }

@@ -54,6 +54,15 @@ class Particle {
       this.physical_body = Bodies.circle(position.x, position.y, (this.sprite.width / 3), options)
 
       // if body with sprite or a static body without sprite (if impediment is painted on canvas)
+    } else if (shape == "rect") {
+      let shrink_physical = 4 // by a third, fourth, etc.
+      this.sprite = sprite;
+      // position of attractive_shape (left top) - static
+      this.attractivePosition = position;
+      // convert physical and attractive positions
+      this.offsetPhysical = { "x": -this.sprite.width / 2, "y": -this.sprite.height / 2 };
+      this.physical_body = Bodies.rectangle(position.x, position.y, (this.sprite.width - this.sprite.width / shrink_physical), (this.sprite.height - this.sprite.height / shrink_physical), options)
+
     } else if ((typeof sprite !== "undefined") || (typeof options !== "undefined" && options.isStatic == true)) {
       this.sprite = sprite;
 
@@ -287,8 +296,8 @@ class Particles {
 
     // correct for difference between top left and centre
     let position_corrected = {
-      x: position.x + chosen_building_plan.offsetPhysical.x * SCALING_FACTOR,
-      y: position.y + chosen_building_plan.offsetPhysical.y * SCALING_FACTOR,
+      x: position.x * SCALING_FACTOR,
+      y: position.y * SCALING_FACTOR,
     }
 
     this.bodies.push(new Particle(

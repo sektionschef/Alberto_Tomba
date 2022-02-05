@@ -1,16 +1,18 @@
 # Tasks
+* add 100 particles and then its done
 * combine the pixels instead of redrawing
+* haben particles bei origin einen random angle?
+
+## ebenen
 * drauf - impasto details und die rakes, 
 * best things: impasto strong and weak
-* drunter: thick dry dotsos - oder drüber
 * particles: thickpaint rects
+* drunter: thick dry dotsos - oder drüber
+* background: the canvas, sth dirty 
 
 * hearbeat - a bissl zucke und dann regelmäßig eine explosion
-* strokes mit random angle - drei von ihnen.
-* epicentrum - entfernung von einem punkt schwächt die force
-* wiederum drei ebenen: canvas - umdrehen + hintergrund dnyamisch vlt. impediments + bälle + drüber vlt.
 * change gravity - `engine.world.gravity.y` & `engine.world.gravity.x`
-
+* epicentrum - entfernung von einem punkt schwächt die force
 * Epizentrum position
 * Staerke Epizentrum
 

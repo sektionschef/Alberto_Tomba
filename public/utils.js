@@ -53,3 +53,9 @@ function loadAreas() {
         currentArea.image = loadImage(currentArea.file);
     }
 }
+
+function loadAreasTop() {
+    for (let currentArea of areas_top_data.data) {
+        currentArea.image = loadImage(currentArea.file);
+    }
+}
