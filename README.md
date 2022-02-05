@@ -1,4 +1,9 @@
 # Tasks
+* combine the pixels instead of redrawing
+* drauf - impasto details und die rakes, 
+* best things: impasto strong and weak
+* drunter: thick dry dotsos - oder drüber
+* particles: thickpaint rects
 
 * hearbeat - a bissl zucke und dann regelmäßig eine explosion
 * strokes mit random angle - drei von ihnen.
@@ -10,6 +15,16 @@
 * Staerke Epizentrum
 
 https://github.com/liabru/matter-js/blob/master/examples/timescale.js 
+
+reges für alle zahlen, `(\d+)` von - https://regex101.com/ , https://stackoverflow.com/questions/1043619/get-numbers-from-string-with-regex 
+
+* mit den "px" in regex - https://stackoverflow.com/questions/30342731/javascript-regex-to-find-numbers-followed-by-px-or 
+
+# learnings
+
+make iterations experimentations easy - automation for learning fast, e.g. sprite identification. früher mit der hand elemnte nachgezeichnet, dann digital mit pad und jetzt mit spritecow. 
+
+http://www.spritecow.com/ 
 
 # Environment
 

@@ -19,6 +19,7 @@ class Areas {
             for (let currentSprite of currentArea.sprites) {
                 push();
                 tint(currentSprite.color);
+                imageMode(CENTER);
                 image(
                     currentSprite.sprite,
                     currentSprite.x * SCALING_FACTOR,

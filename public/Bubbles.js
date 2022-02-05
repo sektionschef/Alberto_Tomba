@@ -3,7 +3,7 @@ class Bubbles extends Particles {
         const options = {
             isStatic: false,
             friction: 1,
-            restitution: 0.5,  // A Number that defines the restitution (elasticity) of the body.
+            restitution: 1,  // A Number that defines the restitution (elasticity) of the body.
             density: 1,
             // inertia: Infinity,  // prevents rotation
         }
