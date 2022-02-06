@@ -382,7 +382,7 @@ let areas_data = [
         ]
     },
     {
-        "file": "area_01_impasto_weak 02.png",
+        "file": "area_01_impasto_weak_02.png",
         "sprites": [
             {
                 "label": "1",
@@ -773,7 +773,7 @@ let areas_data = [
     //     ]
     // },
     // {
-    //     "file": "area_02_impasto_details 02.png",
+    //     "file": "area_02_impasto_details_02.png",
     //     "sprites": [
     //         {
     //             "label": "1",

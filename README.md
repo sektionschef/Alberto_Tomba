@@ -1,13 +1,8 @@
 # Tasks
-* bigger sized particles
-* more in the background
-* color palettes
-* background einfacher - nicht drei
 * features
-* check resize
+* check resize - particles
 * preview function in die freeze phase
 * cleanup images und objekte im code
-* background(120)
 
 
 * combine the pixels instead of redrawing
