@@ -14,13 +14,14 @@
 // More about it in the guide, section features:
 // [https://fxhash.xyz/articles/guide-mint-generative-token#features]
 //
-// window.$fxhashFeatures = {
-//     "Palette": PALETTE_NAME,
-// }
+window.$fxhashFeatures = {
+    "Palette": PALETTE_NAME
+}
 // this code writes the values to the DOM as an example
-// const container = document.createElement("div")
-// container.innerText = `
-//   random hash: ${fxhash}\n
-//   some pseudo random values: [ ${fxrand()}, ${fxrand()}, ${fxrand()}, ${fxrand()}, ${fxrand()},... ]\n
-// `
-// document.body.prepend(container)
+const containero = document.createElement("div")
+containero.innerText = `
+  random hash: ${fxhash}\n
+  some pseudo random values: [ ${fxrand()}, ${fxrand()}, ${fxrand()}, ${fxrand()}, ${fxrand()},... ]\n
+  Palette: ${window.$fxhashFeatures['Palette']}\n
+`
+document.body.prepend(containero)

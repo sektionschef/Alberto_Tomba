@@ -3,7 +3,6 @@
 const SWITCH_LOGGING_LEVEL = "info";
 // const SWITCH_LOGGING_LEVEL = "debug";
 
-// mind aspect ratio of image - default resolution
 const CANVAS_WIDTH = 1080;
 const CANVAS_HEIGHT = 1080;
 
@@ -20,7 +19,6 @@ let debugging_physical_body_count = 0;
 
 // REWORK
 let timeScaleTarget = 1;
-
 
 // matter.js stuff
 var Engine = Matter.Engine;
@@ -47,6 +45,8 @@ let stroke_image;
 let PALETTE;
 let background_image;
 let background_color;
+// for FEATURE creation
+let PALETTE_NAME = "miah";
 
 const origins_data = [
   { label: "1", x: getRandomFromInterval(0, CANVAS_WIDTH), y: 60, },
@@ -91,7 +91,7 @@ function setup() {
   chosen_palette = getRandomFromList(palettes.palettes);
   PALETTE = chosen_palette.values;
   PALETTE_NAME = chosen_palette.name;
-  console.log(PALETTE_NAME);
+  // console.log(PALETTE_NAME);
 
   // impediment_strokes = new Strokes(stroke_data.data)
   // impediment_strokes.create_all();
@@ -106,8 +106,6 @@ function setup() {
 
   Matter.Runner.run(engine)
   engine.world.gravity.y = VERTICAL_GRAVITY;
-
-  background(120);
 
   areas = new Areas(areas_data.data);
   // areas_top = new Areas(areas_top_data.data);
@@ -173,8 +171,6 @@ function draw() {
         }
       }
     }
-  } else {
-    changeGravity();
   }
 
   freezeLifestyle();

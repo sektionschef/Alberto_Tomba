@@ -1,9 +1,18 @@
 # Tasks
-* change gravity - `engine.world.gravity.y` & `engine.world.gravity.x`
+* bigger sized particles
+* more in the background
+* color palettes
+* background einfacher - nicht drei
+* features
 * check resize
+* preview function in die freeze phase
+* cleanup images und objekte im code
+* background(120)
+
+
 * combine the pixels instead of redrawing
-* haben particles bei origin einen random angle?
-* background einfacher
+
+features not mandatory
 
 # sinus
 * https://p5js.org/examples/math-sine-cosine.html
@@ -11,8 +20,12 @@
 * https://gorillasun.de/blog/Continuous-oscillating-motion-in-P5JS-with-Sine-functions 
 
 # parameter
-* gravity speed change
-* power des epizentrums
+* palette
+* gravity speed change - `gravity_thing`
+* dauer der pause
+* dauer des freeze
+* power des epizentrums - 1 ist zu viel
+* number of particles
 
 ## ebenen
 * drauf - impasto details und die rakes, 
@@ -21,22 +34,9 @@
 * drunter: thick dry dotsos - oder drüber
 * background: the canvas, sth dirty 
 
-* hearbeat - a bissl zucke und dann regelmäßig eine explosion
-* epicentrum - entfernung von einem punkt schwächt die force
-* Epizentrum position
-* Staerke Epizentrum
 
 https://github.com/liabru/matter-js/blob/master/examples/timescale.js 
 
-reges für alle zahlen, `(\d+)` von - https://regex101.com/ , https://stackoverflow.com/questions/1043619/get-numbers-from-string-with-regex 
-
-* mit den "px" in regex - https://stackoverflow.com/questions/30342731/javascript-regex-to-find-numbers-followed-by-px-or 
-
-# learnings
-
-make iterations experimentations easy - automation for learning fast, e.g. sprite identification. früher mit der hand elemnte nachgezeichnet, dann digital mit pad und jetzt mit spritecow. 
-
-http://www.spritecow.com/ 
 
 # Environment
 

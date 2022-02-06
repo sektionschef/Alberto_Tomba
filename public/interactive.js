@@ -45,8 +45,7 @@ function explode() {
     var body = bodies[i];
 
     if (!body.isStatic) {
-      // var forceMagnitude = 0.05 * body.mass;
-      var forceMagnitude = 1 * body.mass;
+      var forceMagnitude = 0.5 * body.mass;
 
       Body.applyForce(body, body.position, {
         // x: (forceMagnitude + Common.random() * forceMagnitude) * Common.choose([1, -1]),
@@ -64,6 +63,8 @@ function freezeLifestyle() {
   // if gap between value and target is bigger than
   if (Math.abs(engine.timing.timeScale - timeScaleTarget) > 0.00001) {
     engine.timing.timeScale += (timeScaleTarget - engine.timing.timeScale) * 0.05;
+  } else {
+    changeGravity();
   }
 
 }
@@ -72,5 +73,5 @@ function changeGravity() {
   engine.world.gravity.x = sin(radians(gravity_thing))
   engine.world.gravity.y = cos(radians(gravity_thing))
 
-  gravity_thing += 0.1;
+  gravity_thing += 0.5;  // 0.1 - 1
 }
