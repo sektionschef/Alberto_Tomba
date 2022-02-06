@@ -1,6 +1,6 @@
 let PALETTE = [
     {
-        name: "chinese wanderer",
+        name: "Chinese wanderer",
         values: [
             "#878787",
             "#A08794",
@@ -11,7 +11,7 @@ let PALETTE = [
         url: "https://coolors.co/878787-a08794-bb7e8c-c9b6be-d1becf"
     },
     {
-        name: "chinese wanderer",
+        name: "sleepy Sevilla",
         values: [
             "#6699CC",
             "#FFF275",

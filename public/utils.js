@@ -49,11 +49,11 @@ function distortColor(colorObject) {
 }
 
 // as soon as the json is loaded, load the images via callback
-function loadAreas() {
-    for (let currentArea of areas_data.data) {
-        currentArea.image = loadImage(currentArea.file);
-    }
-}
+// function loadAreas() {
+//     for (let currentArea of areas_data.data) {
+//         currentArea.image = loadImage(currentArea.file);
+//     }
+// }
 
 function loadAreasTop() {
     for (let currentArea of areas_top_data.data) {

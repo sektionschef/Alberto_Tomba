@@ -41,12 +41,9 @@ let background_image;
 let background_color;
 // for FEATURE creation
 
-console.log(PALETTE)
 chosen_palette = getRandomFromList(PALETTE);
-console.log(chosen_palette);
 PALETTE = chosen_palette.values;
 PALETTE_NAME = chosen_palette.name;
-console.log(PALETTE_NAME);
 
 const origins_data = [
   { label: "1", x: getRandomFromInterval(0, CANVAS_WIDTH), y: 60, },
@@ -67,8 +64,12 @@ function preload() {
   particles_image = loadImage('particles.png');
 
   particles_data = loadJSON("particles_data.json");
-  areas_data = loadJSON("areas_data.json", loadAreas);
+  // areas_data = loadJSON("areas_data.json", loadAreas);
   // palettes = loadJSON("palettes.json");
+
+  for (let currentArea of areas_data) {
+    currentArea.image = loadImage(currentArea.file);
+  }
 }
 
 function setup() {
@@ -95,7 +96,7 @@ function setup() {
   Matter.Runner.run(engine)
   engine.world.gravity.y = VERTICAL_GRAVITY;
 
-  areas = new Areas(areas_data.data);
+  areas = new Areas(areas_data);
 
   resize_canvas();
 }
