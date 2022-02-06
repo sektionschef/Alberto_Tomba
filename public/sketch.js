@@ -44,7 +44,7 @@ PALETTE = chosen_palette.values;
 PALETTE_NAME = chosen_palette.name;
 logging.info("palette: " + PALETTE_NAME);
 
-const NUMBER_PARTICLES = 200;
+const NUMBER_PARTICLES = 200;  // max 200
 
 // milliseconds
 const EXPLOSION_INTERVAL = 8000// 4000 - 8000
