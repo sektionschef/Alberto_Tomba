@@ -63,8 +63,6 @@ function preload() {
 
   particles_image = loadImage('particles.png');
 
-  particles_data = loadJSON("particles_data.json");
-
   for (let currentArea of areas_data) {
     currentArea.image = loadImage(currentArea.file);
   }
@@ -86,7 +84,7 @@ function setup() {
   impediment_walls = new Walls()
   impediment_walls.create_all();
 
-  particles_physical = new Bubbles(particles_data.data);
+  particles_physical = new Bubbles(particles_data);
 
   origins = new Origins(origins_data);
   origins.create_all();
