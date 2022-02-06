@@ -64,8 +64,6 @@ function preload() {
   particles_image = loadImage('particles.png');
 
   particles_data = loadJSON("particles_data.json");
-  // areas_data = loadJSON("areas_data.json", loadAreas);
-  // palettes = loadJSON("palettes.json");
 
   for (let currentArea of areas_data) {
     currentArea.image = loadImage(currentArea.file);
