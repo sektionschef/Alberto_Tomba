@@ -15,7 +15,11 @@
 // [https://fxhash.xyz/articles/guide-mint-generative-token#features]
 //
 window.$fxhashFeatures = {
-    "Palette": PALETTE_NAME
+    "Palette": PALETTE_NAME,
+    "Number of particles": NUMBER_PARTICLES,
+    "Explosion interval (milliseconds)": EXPLOSION_INTERVAL,
+    "Freeze duration (milliseconds)": FREEZE_DURATION,
+    "Explosion to freeze (milliseconds)": EXPLOSION_TO_FREEZE
 }
 
 // this code writes the values to the DOM as an example
