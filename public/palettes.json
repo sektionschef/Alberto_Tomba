@@ -1,99 +1,24 @@
 {
     "palettes": [
         {
-            "name": "shingle shamingle good",
+            "name": "chinese wanderer",
             "values": [
-                "#2b193d",
-                "#2c365e",
-                "#484d6d",
-                "#4b8f8c",
-                "#c5979d"
+                "#878787",
+                "#A08794",
+                "#BB7E8C",
+                "#C9B6BE",
+                "#D1BECF"
             ],
-            "url": "https://coolors.co/2b193d-2c365e-484d6d-4b8f8c-c5979d"
+            "url": "https://coolors.co/878787-a08794-bb7e8c-c9b6be-d1becf"
         },
         {
-            "name": "brutally honest good",
+            "name": "chinese wanderer",
             "values": [
-                "#191308",
-                "#322a26",
-                "#454b66",
-                "#677db7",
-                "#9ca3db"
-            ],
-            "url": "https://coolors.co/191308-322a26-454b66-677db7-9ca3db"
-        },
-        {
-            "name": "squirrel on a barrel",
-            "values": [
-                "#1e1e24",
-                "#fb9f89",
-                "#c4af9a",
-                "#81ae9d",
-                "#21a179"
-            ],
-            "url": ""
-        },
-        {
-            "name": "ancestors on the rocks",
-            "values": [
-                "#eabfcb",
-                "#c191a1",
-                "#a4508b",
-                "#5f0a87",
-                "#2f004f"
-            ],
-            "url": ""
-        },
-        {
-            "name": "pull the bear",
-            "values": [
-                "#666a86",
-                "#788aa3",
-                "#92b6b1",
-                "#b2c9ab",
-                "#e8ddb5"
-            ],
-            "url": ""
-        },
-        {
-            "name": "jungle unplugged",
-            "values": [
-                "#9cafb7",
-                "#adb993",
-                "#d0d38f",
-                "#f6ca83",
-                "#949d6a"
-            ],
-            "url": "https://coolors.co/9cafb7-adb993-d0d38f-f6ca83-949d6a"
-        },
-        {
-            "name": "harry helps",
-            "values": [
-                "#fcd0a1",
-                "#b1b695",
-                "#53917e",
-                "#63535b",
-                "#6d1a36"
-            ]
-        },
-        {
-            "name": "princess berta",
-            "values": [
-                "#fcfcfc",
-                "#f7567c",
-                "#fffae3",
-                "#99e1d9",
-                "#5d576b"
-            ]
-        },
-        {
-            "name": "sandy turtle",
-            "values": [
-                "#d8e2dc",
-                "#ffffff",
-                "#ffcad4",
-                "#f4acb7",
-                "#9d8189"
+                "#6699CC",
+                "#FFF275",
+                "#FF8C42",
+                "#FF643D",
+                "#FF3C38"
             ]
         }
     ]

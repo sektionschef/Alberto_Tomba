@@ -33,20 +33,20 @@ var MouseConstraint = Matter.MouseConstraint;
 var engine;
 var world;
 
-let underneath_image;
-let impediments_image;
-let on_top_image;
-
 let SCALING_FACTOR = 1;
 let rescaling_width;
 let rescaling_height;
 
-let stroke_image;
-let PALETTE;
 let background_image;
 let background_color;
 // for FEATURE creation
-let PALETTE_NAME = "miah";
+
+console.log(PALETTE)
+chosen_palette = getRandomFromList(PALETTE);
+console.log(chosen_palette);
+PALETTE = chosen_palette.values;
+PALETTE_NAME = chosen_palette.name;
+console.log(PALETTE_NAME);
 
 const origins_data = [
   { label: "1", x: getRandomFromInterval(0, CANVAS_WIDTH), y: 60, },
@@ -64,14 +64,11 @@ function preload() {
   background_c = loadImage('background_c.png');
   canvas_image = loadImage('canvas_02.png');
 
-  strokes_full = loadImage('strokes_full.png');
   particles_image = loadImage('particles.png');
 
-  stroke_data = loadJSON("stroke_data.json");
   particles_data = loadJSON("particles_data.json");
   areas_data = loadJSON("areas_data.json", loadAreas);
-  // areas_top_data = loadJSON("areas_top_data.json", loadAreasTop);
-  palettes = loadJSON("palettes.json");
+  // palettes = loadJSON("palettes.json");
 }
 
 function setup() {
@@ -87,15 +84,6 @@ function setup() {
   const VERTICAL_GRAVITY = 1;
   // const VERTICAL_GRAVITY = getRandomFromInterval(0.05, 0.5);
 
-
-  chosen_palette = getRandomFromList(palettes.palettes);
-  PALETTE = chosen_palette.values;
-  PALETTE_NAME = chosen_palette.name;
-  // console.log(PALETTE_NAME);
-
-  // impediment_strokes = new Strokes(stroke_data.data)
-  // impediment_strokes.create_all();
-
   impediment_walls = new Walls()
   impediment_walls.create_all();
 
@@ -108,7 +96,6 @@ function setup() {
   engine.world.gravity.y = VERTICAL_GRAVITY;
 
   areas = new Areas(areas_data.data);
-  // areas_top = new Areas(areas_top_data.data);
 
   resize_canvas();
 }
@@ -136,12 +123,9 @@ function draw() {
   areas.show();
 
   particles_physical.show();
-  // impediment_strokes.show();
   impediment_walls.show();
 
   particles_physical.kill_not_needed(NUMBER_PARTICLES);
-
-  // areas_top.show();
 
   Engine.update(engine);
 
