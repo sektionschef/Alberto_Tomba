@@ -11,7 +11,7 @@ let PALETTE = [
         url: "https://coolors.co/878787-a08794-bb7e8c-c9b6be-d1becf"
     },
     {
-        name: "sleepy Sevilla",
+        name: "Sleepy Sevilla",
         values: [
             "#6699CC",
             "#FFF275",

@@ -39,6 +39,7 @@ function resize_canvas() {
 
 
 function explode() {
+  logging.info("BOOM!")
   var bodies = Composite.allBodies(engine.world);
 
   for (var i = 0; i < bodies.length; i++) {
@@ -55,6 +56,24 @@ function explode() {
       });
     }
   }
+
+  setTimeout(triggerFreeze, EXPLOSION_TO_FREEZE)
+}
+
+function triggerFreeze() {
+  logging.info("Freeze triggered.");
+  if (timeScaleTarget == 1) {
+    timeScaleTarget = 0;
+  }
+
+  setTimeout(releaseFreeze, FREEZE_DURATION)
+}
+
+function releaseFreeze() {
+  logging.info("Freeze released.");
+  timeScaleTarget = 1;
+
+  setTimeout(explode, EXPLOSION_INTERVAL);
 }
 
 

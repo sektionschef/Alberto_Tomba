@@ -6,8 +6,6 @@ const SWITCH_LOGGING_LEVEL = "info";
 const CANVAS_WIDTH = 1080;
 const CANVAS_HEIGHT = 1080;
 
-const NUMBER_PARTICLES = 100;
-
 let gravity_thing = 0;
 
 let custom_font;
@@ -39,11 +37,20 @@ let rescaling_height;
 
 let background_image;
 let background_color;
-// for FEATURE creation
 
+// for FEATURE creation
 chosen_palette = getRandomFromList(PALETTE);
 PALETTE = chosen_palette.values;
 PALETTE_NAME = chosen_palette.name;
+logging.info("palette: " + PALETTE_NAME);
+
+const NUMBER_PARTICLES = 100;
+
+// milliseconds
+const EXPLOSION_INTERVAL = 8000// 4000 - 8000
+const FREEZE_DURATION = 5000;
+const EXPLOSION_TO_FREEZE = 30;
+
 
 const origins_data = [
   { label: "1", x: getRandomFromInterval(0, CANVAS_WIDTH), y: 60, },
@@ -57,8 +64,6 @@ function preload() {
   fontRegular = loadFont('SourceSansPro-Regular.otf');
 
   background_a = loadImage('background_a.png');
-  background_b = loadImage('background_b.png');
-  background_c = loadImage('background_c.png');
   canvas_image = loadImage('canvas_02.png');
 
   particles_image = loadImage('particles.png');
@@ -95,6 +100,8 @@ function setup() {
   areas = new Areas(areas_data);
 
   resize_canvas();
+
+  setTimeout(explode, EXPLOSION_INTERVAL);
 }
 
 function draw() {
@@ -105,8 +112,6 @@ function draw() {
 
   push();
   image(background_a, 0, 0, background_a.width * SCALING_FACTOR, background_a.height * SCALING_FACTOR)
-  image(background_b, 0, 0, background_b.width * SCALING_FACTOR, background_b.height * SCALING_FACTOR)
-  image(background_c, 0, 0, background_c.width * SCALING_FACTOR, background_c.height * SCALING_FACTOR)
   pop();
 
   // LIMIT
@@ -137,22 +142,6 @@ function draw() {
   // if (frameCount % 3 == 0) {
   //   logging.debug("timeScale: " + engine.timing.timeScale);
   // }
-
-  if (frameCount % 240 == 0) {
-    console.log("Booom!");
-    explode();
-    if (frameCount % 60 == 0) {
-      console.log("Trigger freeze.");
-      if (timeScaleTarget == 1) {
-        timeScaleTarget = 0;
-      } else {
-        if (frameCount % 480 == 0) {
-          console.log("Release freeze.");
-          timeScaleTarget = 1;
-        }
-      }
-    }
-  }
 
   freezeLifestyle();
 }
