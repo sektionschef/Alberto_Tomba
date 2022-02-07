@@ -102,6 +102,7 @@ function setup() {
   particles_physical = new Bubbles(particles_data);
 
   origins = new Origins(origins_data);
+  // better via callback
   origins.create_all();
 
   Matter.Runner.run(engine)
@@ -125,8 +126,11 @@ function draw() {
   pop();
 
   // LIMIT
-  if (particles_physical.bodies.length < NUMBER_PARTICLES) {
-    origins.drop_all();
+  if (frameCount > 300) {
+    logging.debug("drop the particles.")
+    if (particles_physical.bodies.length < NUMBER_PARTICLES) {
+      origins.drop_all();
+    }
   }
 
   if (logging.getLevel() <= 1) {
@@ -139,12 +143,6 @@ function draw() {
 
   particles_physical.kill_not_needed(NUMBER_PARTICLES);
 
-  Engine.update(engine);
-
-  push();
-  image(canvas_image, 0, 0, canvas_image.width * SCALING_FACTOR, canvas_image.height * SCALING_FACTOR)
-  pop();
-
   // show_framerate();
   // show_number_physical_bodies();
 
@@ -152,6 +150,13 @@ function draw() {
   // if (frameCount % 3 == 0) {
   //   logging.debug("timeScale: " + engine.timing.timeScale);
   // }
+  if (frameCount > 300) {
+    freezeLifestyle();
+  }
 
-  freezeLifestyle();
+  push();
+  image(canvas_image, 0, 0, canvas_image.width * SCALING_FACTOR, canvas_image.height * SCALING_FACTOR)
+  pop();
+
+  Engine.update(engine);
 }
