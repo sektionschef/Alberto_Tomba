@@ -1,35 +1,12 @@
 # Tasks
-* features
+* features - 
 * check resize - particles
 * preview function in die freeze phase
 * cleanup images und objekte im code
 
 
-* combine the pixels instead of redrawing
 
-features not mandatory
-
-# sinus
-* https://p5js.org/examples/math-sine-cosine.html
-* https://p5js.org/examples/math-sine.html 
-* https://gorillasun.de/blog/Continuous-oscillating-motion-in-P5JS-with-Sine-functions 
-
-# parameter
-* palette
-* gravity speed change - `gravity_thing`
-* dauer der pause
-* dauer des freeze
-* power des epizentrums - 1 ist zu viel
-* number of particles
-
-## ebenen
-* drauf - impasto details und die rakes, 
-* best things: impasto strong and weak
-* particles: thickpaint rects
-* drunter: thick dry dotsos - oder drüber
-* background: the canvas, sth dirty 
-
-
+# physical inspiration
 https://github.com/liabru/matter-js/blob/master/examples/timescale.js 
 
 

@@ -6,7 +6,7 @@ const SWITCH_LOGGING_LEVEL = "info";
 const CANVAS_WIDTH = 1080;
 const CANVAS_HEIGHT = 1080;
 
-let gravity_thing = 0;
+let gravity_counter = 0;
 
 let custom_font;
 let custom_font_bold;
@@ -42,14 +42,21 @@ let background_color;
 chosen_palette = getRandomFromList(PALETTE);
 PALETTE = chosen_palette.values;
 PALETTE_NAME = chosen_palette.name;
-logging.info("palette: " + PALETTE_NAME);
 
-const NUMBER_PARTICLES = 70;  // max 200
+const NUMBER_PARTICLES = 70;  // min 30 max 200
 
-// milliseconds
 const EXPLOSION_INTERVAL = 8000// 4000 - 8000
 const FREEZE_DURATION = 5000;
 const EXPLOSION_TO_FREEZE = 30;
+
+const EPLOSION_FORCE = 0.5;
+
+const GRAVITY_SPEED = 0.5; // 0.1 - 1
+
+logging.info("palette: " + PALETTE_NAME);
+logging.info("number of particles: " + NUMBER_PARTICLES)
+
+
 
 
 const origins_data = [
