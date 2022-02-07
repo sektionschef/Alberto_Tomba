@@ -21,7 +21,7 @@ window.$fxhashFeatures = {
     "Freeze duration (milliseconds)": FREEZE_DURATION,
     "Explosion to freeze (milliseconds)": EXPLOSION_TO_FREEZE,
     "Explsion force": EXPLOSION_FORCE,
-    "Gravity speed": GRAVITY_SPEED
+    "Gravity speed": GRAVITY_SPEED,
 }
 
 // this code writes the values to the DOM as an example

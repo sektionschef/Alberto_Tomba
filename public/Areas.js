@@ -1,5 +1,8 @@
 class Areas {
     constructor(data) {
+        this.max_counter = 108;
+        this.counter = 0;
+
         this.data = data;
         this.move_a_little = 20;
 
@@ -15,20 +18,40 @@ class Areas {
         }
     }
     show() {
+        console.log(this.counter + " - " + this.max_counter)
+
         for (let currentArea of this.data) {
             for (let currentSprite of currentArea.sprites) {
-                push();
-                tint(currentSprite.color);
-                imageMode(CENTER);
-                image(
-                    currentSprite.sprite,
-                    currentSprite.x * SCALING_FACTOR,
-                    currentSprite.y * SCALING_FACTOR,
-                    currentSprite.sprite.width * SCALING_FACTOR,
-                    currentSprite.sprite.height * SCALING_FACTOR
-                )
-                pop();
+                if (this.counter < this.max_counter) {
+                    setTimeout(function (that) {
+                        that.draw_single(currentSprite)
+                    }, getRandomFromInterval(500, 5000), this)
+                }
+                else if (this.counter >= this.max_counter) {
+                    // this.draw_single(currentSprite);
+                    // this.counter += 1;
+                }
+                else { }
             }
         }
     }
+
+    draw_single(sprite) {
+        if (this.hidden = false) {
+
+            push();
+            tint(sprite.color);
+            imageMode(CENTER);
+            image(
+                sprite.sprite,
+                sprite.x * SCALING_FACTOR,
+                sprite.y * SCALING_FACTOR,
+                sprite.sprite.width * SCALING_FACTOR,
+                sprite.sprite.height * SCALING_FACTOR
+            )
+            pop();
+            this.counter += 1;
+        }
+    }
 }
+
