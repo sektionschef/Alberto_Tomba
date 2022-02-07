@@ -42,17 +42,17 @@ let PALETTE = [
         ],
         url: "https://coolors.co/f1dac4-a69cac-474973-161b33-0d0c1d"
     },
-    {
-        name: "no fear of frogs",
-        values: [
-            "#75F4F4",
-            "#90E0F3",
-            "#B8B3E9",
-            "#D999B9",
-            "#D17B88"
-        ],
-        url: "https://coolors.co/75f4f4-90e0f3-b8b3e9-d999b9-d17b88"
-    },
+    // {
+    //     name: "no fear of frogs",
+    //     values: [
+    //         "#75F4F4",
+    //         "#90E0F3",
+    //         "#B8B3E9",
+    //         "#D999B9",
+    //         "#D17B88"
+    //     ],
+    //     url: "https://coolors.co/75f4f4-90e0f3-b8b3e9-d999b9-d17b88"
+    // },
     {
         name: "eggs benedict",
         values: [

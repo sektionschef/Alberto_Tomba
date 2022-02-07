@@ -39,7 +39,7 @@ function resize_canvas() {
 
 
 function explode() {
-  logging.info("BOOM!")
+  logging.debug("BOOM!")
   var bodies = Composite.allBodies(engine.world);
 
   for (var i = 0; i < bodies.length; i++) {
@@ -61,7 +61,7 @@ function explode() {
 }
 
 function triggerFreeze() {
-  logging.info("Freeze triggered.");
+  logging.debug("Freeze triggered.");
   if (timeScaleTarget == 1) {
     timeScaleTarget = 0;
   }
@@ -70,7 +70,7 @@ function triggerFreeze() {
 }
 
 function releaseFreeze() {
-  logging.info("Freeze released.");
+  logging.debug("Freeze released.");
   timeScaleTarget = 1;
 
   setTimeout(explode, EXPLOSION_INTERVAL);

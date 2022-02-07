@@ -16,13 +16,14 @@
 //
 window.$fxhashFeatures = {
     "Palette": PALETTE_NAME,
-    "Number of particles": NUMBER_PARTICLES,
-    "Explosion interval (milliseconds)": EXPLOSION_INTERVAL,
-    "Freeze duration (milliseconds)": FREEZE_DURATION,
-    "Explosion to freeze (milliseconds)": EXPLOSION_TO_FREEZE,
-    "Explsion force": EXPLOSION_FORCE,
-    "Gravity speed": GRAVITY_SPEED,
+    "Number of particles": NUMBER_PARTICLES_LABEL,
+    "Explosion interval (milliseconds)": EXPLOSION_INTERVAL_LABEL,
+    "Freeze duration (milliseconds)": FREEZE_DURATION_LABEL,
+    "Explosion to freeze (milliseconds)": EXPLOSION_TO_FREEZE_LABEL,
+    "Explsion force": EXPLOSION_FORCE_LABEL,
+    "Gravity speed": GRAVITY_SPEED_LABEL,
 }
+
 
 // this code writes the values to the DOM as an example
 // const containero = document.createElement("div")

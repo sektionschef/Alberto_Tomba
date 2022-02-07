@@ -19,7 +19,7 @@ class Areas {
         for (let currentArea of this.data) {
             for (let currentSprite of currentArea.sprites) {
                 if (currentSprite.hidden == true) {
-                    if (frameCount % Math.floor(getRandomFromInterval(20, 200)) == 0)
+                    if (frameCount % Math.floor(getRandomFromInterval(10, 100)) == 0)
                         currentSprite.hidden = false
                 }
                 else {

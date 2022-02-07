@@ -43,23 +43,79 @@ chosen_palette = getRandomFromList(PALETTE);
 PALETTE = chosen_palette.values;
 PALETTE_NAME = chosen_palette.name;
 
-const NUMBER_PARTICLES = 70;  // min 30 max 200
+const NUMBER_PARTICLES = Math.floor(getRandomFromInterval(40, 130));  // 70
 
 const EXPLOSION_INTERVAL = getRandomFromInterval(4000, 8000);  // 8000
-const FREEZE_DURATION = getRandomFromInterval(3000, 8000);  // 5000
+const FREEZE_DURATION = getRandomFromInterval(3000, 9000);  // 5000
 const EXPLOSION_TO_FREEZE = getRandomFromInterval(20, 50);  // 30;
 
 const EXPLOSION_FORCE = getRandomFromInterval(0.1, 1);  // 0.5
 const GRAVITY_SPEED = getRandomFromInterval(0.1, 1); // 0.5
 
-logging.info("Palette: " + PALETTE_NAME + " " + PALETTE[0]);
-logging.info("Number of particles: " + NUMBER_PARTICLES);
-logging.info("Explosion interval: " + EXPLOSION_INTERVAL);
-logging.info("Freeze duration: " + FREEZE_DURATION);
-logging.info("Explosion to freeze: " + EXPLOSION_TO_FREEZE);
-logging.info("Explosion force: " + EXPLOSION_FORCE);
-logging.info("Gravity: " + GRAVITY_SPEED);
 
+if (NUMBER_PARTICLES < 70) {
+  NUMBER_PARTICLES_LABEL = "Low"
+} else if (NUMBER_PARTICLES < 100) {
+  NUMBER_PARTICLES_LABEL = "Medium"
+} else {
+  NUMBER_PARTICLES_LABEL = "High"
+}
+
+if (EXPLOSION_INTERVAL < 5000) {
+  EXPLOSION_INTERVAL_LABEL = "Low"
+} else if (EXPLOSION_INTERVAL < 7000) {
+  EXPLOSION_INTERVAL_LABEL = "Medium"
+} else {
+  EXPLOSION_INTERVAL_LABEL = "High"
+}
+
+
+if (EXPLOSION_FORCE < 0.4) {
+  EXPLOSION_FORCE_LABEL = "Low"
+} else if (EXPLOSION_FORCE < 0.7) {
+  EXPLOSION_FORCE_LABEL = "Medium"
+} else {
+  EXPLOSION_FORCE_LABEL = "High"
+}
+
+if (FREEZE_DURATION < 5000) {
+  FREEZE_DURATION_LABEL = "Low"
+} else if (FREEZE_DURATION < 7000) {
+  FREEZE_DURATION_LABEL = "Medium"
+} else {
+  FREEZE_DURATION_LABEL = "High"
+}
+
+if (EXPLOSION_TO_FREEZE < 30) {
+  EXPLOSION_TO_FREEZE_LABEL = "Low"
+} else if (EXPLOSION_TO_FREEZE < 40) {
+  EXPLOSION_TO_FREEZE_LABEL = "Medium"
+} else {
+  EXPLOSION_TO_FREEZE_LABEL = "High"
+}
+
+
+if (GRAVITY_SPEED < 0.4) {
+  GRAVITY_SPEED_LABEL = "Low"
+} else if (GRAVITY_SPEED < 0.7) {
+  GRAVITY_SPEED_LABEL = "Medium"
+} else {
+  GRAVITY_SPEED_LABEL = "High"
+}
+
+logging.info("Palette: " + PALETTE_NAME);
+// logging.info("Number of particles: " + NUMBER_PARTICLES);
+logging.info("Number of particles label: " + NUMBER_PARTICLES_LABEL);
+// logging.info("Explosion interval: " + EXPLOSION_INTERVAL);
+logging.info("Explosion interval label: " + EXPLOSION_INTERVAL_LABEL);
+// logging.info("Freeze duration: " + FREEZE_DURATION);
+logging.info("Freeze duration label: " + FREEZE_DURATION_LABEL);
+// logging.info("Explosion to freeze: " + EXPLOSION_TO_FREEZE);
+logging.info("Explosion to freeze label: " + EXPLOSION_TO_FREEZE_LABEL);
+// logging.info("Explosion force: " + EXPLOSION_FORCE);
+logging.info("Explosion force label: " + EXPLOSION_FORCE_LABEL);
+// logging.info("Gravity: " + GRAVITY_SPEED);
+logging.info("Gravity speed label: " + GRAVITY_SPEED_LABEL);
 
 
 const origins_data = [
