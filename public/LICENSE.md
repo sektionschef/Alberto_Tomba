@@ -39,3 +39,5 @@ THE SOFTWARE.
 
 https://github.com/liabru/matter-js/blob/master/LICENSE 
 https://github.com/pimterry/loglevel/blob/master/LICENSE-MIT 
+
+in particular this example triggered the inspiration: https://github.com/liabru/matter-js/blob/master/examples/timescale.js  

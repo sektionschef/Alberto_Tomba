@@ -1,14 +1,3 @@
-# Tasks
-* features - 
-* check resize - particles
-* preview function in die freeze phase
-* cleanup images und objekte im code
-
-
-
-# physical inspiration
-https://github.com/liabru/matter-js/blob/master/examples/timescale.js 
-
 
 # Environment
 

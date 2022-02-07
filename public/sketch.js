@@ -8,9 +8,6 @@ const CANVAS_HEIGHT = 1080;
 
 let gravity_counter = 0;
 
-let custom_font;
-let custom_font_bold;
-
 let fps = 0;
 let default_debugging_text_size = 15;
 let debugging_physical_body_count = 0;
@@ -34,9 +31,6 @@ var world;
 let SCALING_FACTOR = 1;
 let rescaling_width;
 let rescaling_height;
-
-let background_image;
-let background_color;
 
 // for FEATURE creation
 chosen_palette = getRandomFromList(PALETTE);
@@ -206,6 +200,7 @@ function draw() {
   // if (frameCount % 3 == 0) {
   //   logging.debug("timeScale: " + engine.timing.timeScale);
   // }
+
   if (frameCount > 300) {
     freezeLifestyle();
   }

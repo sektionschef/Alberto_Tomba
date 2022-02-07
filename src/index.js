@@ -17,10 +17,10 @@
 window.$fxhashFeatures = {
     "Palette": PALETTE_NAME,
     "Number of particles": NUMBER_PARTICLES_LABEL,
-    "Explosion interval (milliseconds)": EXPLOSION_INTERVAL_LABEL,
-    "Freeze duration (milliseconds)": FREEZE_DURATION_LABEL,
-    "Explosion to freeze (milliseconds)": EXPLOSION_TO_FREEZE_LABEL,
-    "Explsion force": EXPLOSION_FORCE_LABEL,
+    "Explosion interval": EXPLOSION_INTERVAL_LABEL,
+    "Freeze duration": FREEZE_DURATION_LABEL,
+    "Explosion to freeze": EXPLOSION_TO_FREEZE_LABEL,
+    "Explosion force": EXPLOSION_FORCE_LABEL,
     "Gravity speed": GRAVITY_SPEED_LABEL,
 }
 
