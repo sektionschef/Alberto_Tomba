@@ -46,7 +46,7 @@ function explode() {
     var body = bodies[i];
 
     if (!body.isStatic) {
-      var forceMagnitude = EPLOSION_FORCE * body.mass;
+      var forceMagnitude = EXPLOSION_FORCE * body.mass;
 
       Body.applyForce(body, body.position, {
         // x: (forceMagnitude + Common.random() * forceMagnitude) * Common.choose([1, -1]),

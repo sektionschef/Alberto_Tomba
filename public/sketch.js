@@ -45,17 +45,20 @@ PALETTE_NAME = chosen_palette.name;
 
 const NUMBER_PARTICLES = 70;  // min 30 max 200
 
-const EXPLOSION_INTERVAL = 8000// 4000 - 8000
-const FREEZE_DURATION = 5000;
-const EXPLOSION_TO_FREEZE = 30;
+const EXPLOSION_INTERVAL = getRandomFromInterval(4000, 8000);  // 8000
+const FREEZE_DURATION = getRandomFromInterval(3000, 8000);  // 5000
+const EXPLOSION_TO_FREEZE = getRandomFromInterval(20, 50);  // 30;
 
-const EPLOSION_FORCE = 0.5;
+const EXPLOSION_FORCE = getRandomFromInterval(0.1, 1);  // 0.5
+const GRAVITY_SPEED = getRandomFromInterval(0.1, 1); // 0.5
 
-const GRAVITY_SPEED = 0.5; // 0.1 - 1
-
-logging.info("palette: " + PALETTE_NAME);
-logging.info("number of particles: " + NUMBER_PARTICLES)
-
+logging.info("Palette: " + PALETTE_NAME + " " + PALETTE[0]);
+logging.info("Number of particles: " + NUMBER_PARTICLES);
+logging.info("Explosion interval: " + EXPLOSION_INTERVAL);
+logging.info("Freeze duration: " + FREEZE_DURATION);
+logging.info("Explosion to freeze: " + EXPLOSION_TO_FREEZE);
+logging.info("Explosion force: " + EXPLOSION_FORCE);
+logging.info("Gravity: " + GRAVITY_SPEED);
 
 
 
